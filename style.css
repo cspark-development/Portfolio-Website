@@ -2,6 +2,7 @@
 	/* Global Page Styling */
 	--background-color: #fbf1c7;
 	--text-color: #3c3836;
+	--global-animation-speed: 0.2;
 
 	/* Navbar Styling */
 	--navbar-height: 70px;
@@ -72,6 +73,7 @@ body {
 	margin: 0;
 	padding: 0;
 	overflow: hidden;
+	transition: var(--global-animation-speed);
 }
 
 /* Navbar */
@@ -128,15 +130,19 @@ body {
 }
 
 @media (max-width: 1030px) {
-  #navbar-title {
-    display: none;
-  }
+  	#navbar-title {
+    		display: none;
+  	}
 }
 
 @media (max-width: 450px) {
-  #navbar-profile-picture {
-    display: none;
-  }
+	#navbar{
+		justify-content: center;
+	}
+	
+	#navbar-profile-picture {
+    		display: none;
+  	}
 }
 
 #navbar-profile-picture {
