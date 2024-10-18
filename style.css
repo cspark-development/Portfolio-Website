@@ -145,6 +145,11 @@ body {
 	background-image: var(--profile-picture);	
 	background-size: 100% 100%;
 	clip-path: circle();
+	transition: var(--navbar-button-animation-speed);
+}
+
+#navbar-profile-picture:hover {
+	filter: brightness(125%);
 }
 
 /* Main/Home Page Data */
@@ -253,10 +258,15 @@ body {
 	clip-path: circle();
 	background-image: var(--profile-picture);
 	background-size: 100% 100%;
+	transition: var(--bio-card-animation-speed);
 	/*
 	border-bottom-left-radius: var(--project-card-border-radius);
 	border-bottom-right-radius: var(--project-card-border-radius);
 	*/
+}
+
+#bio-card-profile-picture:hover {
+	filter: brightness(125%);
 }
 
 /* Project Cards */
