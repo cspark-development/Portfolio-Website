@@ -253,13 +253,13 @@ body {
 	}
 }
 
-@media (max-width: 1030px) {
+@media (max-width: 1050px) {
   	#navbar-title {
     		display: none;
   	}
 }
 
-@media (max-width: 450px) {
+@media (max-width: 500px) {
 	#navbar{
 		justify-content: center;
 	}
