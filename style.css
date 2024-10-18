@@ -19,9 +19,25 @@
 	--navbar-button-text-color: #98971a;
 	--navbar-button-text-color-hover: #b8bb36;
 	--navbar-button-animation-speed: 0.2s;
+	--navbar-profile-picture-size: 50px;
 
 	/* Main Page */
 	--main-padding: 20px;
+
+	/* Bio Card */
+	--bio-card-width: 300px;
+	--bio-card-height: 200px;
+	--bio-card-padding: 10px;
+	--bio-card-border-radius: 5px;
+	--bio-card-gap: 20px;
+	--bio-card-background-color: #3c3836;
+	--bio-card-background-color-hover: #7c6f64;
+	--bio-card-title-text-color: #98971a;
+	--bio-card-title-text-color-hover: #b8bb26;
+	--bio-card-description-text-color: #ebdbb2;
+	--bio-card-description-text-color-hover: #fbf1c7;
+	--bio-card-animation-speed: 0.2s;
+	--bio-card-profile-picture-size: 200px;
 
 	/* Project Cards */
 	--project-card-width: 300px;
@@ -36,6 +52,9 @@
 	--project-card-description-text-color: #ebdbb2;
 	--project-card-description-text-color-hover: #fbf1c7;
 	--project-card-animation-speed: 0.2s;
+
+	/* Profile Picture */
+	--profile-picture: url("https://avatars.githubusercontent.com/u/81488812?v=4")
 }
 
 /* Global */
@@ -52,6 +71,7 @@ body {
 	text-decoration: none;
 	margin: 0;
 	padding: 0;
+	overflow: hidden;
 }
 
 /* Navbar */
@@ -71,6 +91,7 @@ body {
 /* Navbar Route Buttons */
 #navbar-routes {
 	display: flex;
+	overflow-x: scroll;
 	gap: var(--navbar-gap);
 }
 
@@ -98,7 +119,7 @@ body {
 
 /* Navbar Logo/Title */
 #navbar-title {
-	width: 15vw;
+	width: 20vw;
 	position: absolute;
 	margin: 0 auto;
 	text-align: center;
@@ -106,9 +127,31 @@ body {
 	right: 0;
 }
 
-/* Main Page Data */
+@media (max-width: 1030px) {
+  #navbar-title {
+    display: none;
+  }
+}
+
+@media (max-width: 450px) {
+  #navbar-profile-picture {
+    display: none;
+  }
+}
+
+#navbar-profile-picture {
+	width: var(--navbar-profile-picture-size);
+	height: var(--navbar-profile-picture-size);
+	background-image: var(--profile-picture);	
+	background-size: 100% 100%;
+	clip-path: circle();
+}
+
+/* Main/Home Page Data */
 #main {
 	padding: var(--main-padding);
+	height: calc(96vh - var(--navbar-height));
+	overflow-y: scroll;
 }
 
 #main #intro-title {
@@ -123,6 +166,97 @@ body {
 
 #main pre {
 	font-size: x-large;
+}
+
+
+#text-bio-split {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	gap: var(--bio-card-gap);
+}
+
+#home-text {
+	width: 80%;
+}
+
+@media (max-width: 1600px) {
+	#home-text {
+		width: 100%;
+	}
+	#bio-card {
+		width: 100%;
+	}
+	#text-bio-split {
+		justify-content: center;
+	}
+}
+
+@media (max-width: 900px) {
+	.large-ascii-art {
+		display: none;		
+	}
+}
+
+
+#bio-card {
+	width: var(--bio-card-width);
+	background-color: var(--bio-card-background-color);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	padding: 0px;
+	margin-top: 0;
+	margin-bottom: 0;
+	border-radius: var(--bio-card-border-radius);
+	transition: var(--bio-card-animation-speed);
+}
+
+#bio-card:hover {
+	background-color: var(--bio-card-background-color-hover);
+}
+
+#bio-card-title {
+	color: var(--bio-card-title-text-color);
+	padding-top: var(--bio-card-padding);
+	padding-bottom: var(--bio-card-padding);
+	transition: var(--bio-card-animation-speed);
+}
+
+#bio-card-title:hover {
+	color: var(--bio-card-title-text-color-hover);
+}
+
+#bio-card-description {
+	color: var(--bio-card-description-text-color);
+	max-width: var(--bio-card-width);
+	text-overflow: ellipsis;
+	overflow: hidden;
+	padding-bottom: var(--bio-card-padding);
+	transition: var(--bio-card-animation-speed);
+}
+
+#bio-card-description:hover {
+	color: var(--bio-card-description-text-color-hover);
+}
+
+#bio-card-profile-picture {
+	width: var(--bio-card-profile-picture-size);
+	height: var(--bio-card-profile-picture-size);
+	max-width: var(--bio-card-profile-picture-size);
+	max-height: var(--bio-card-profile-picture-size);
+	padding: 0;
+	margin-top: 0;
+	margin-bottom: 0;
+	clip-path: circle();
+	background-image: var(--profile-picture);
+	background-size: 100% 100%;
+	/*
+	border-bottom-left-radius: var(--project-card-border-radius);
+	border-bottom-right-radius: var(--project-card-border-radius);
+	*/
 }
 
 /* Project Cards */
