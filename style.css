@@ -129,6 +129,130 @@ body {
 	right: 0;
 }
 
+/* Disgusting way to make a nice animation with CSS only */
+#navbar-title-c {
+	animation-name: unhide_text, idle_animation;
+	animation-iteration-count: 1, infinite; 
+	animation-duration: 0.2s, 4s;
+	animation-delay: 0s, 0.2s;
+	animation-timing-function: steps(1, end), steps(1, end);
+}
+#navbar-title-s {
+        animation-name: unhide_text, idle_animation;
+	animation-iteration-count: 1, infinite; 
+	animation-duration: 0.4s, 4s;
+	animation-delay: 0s, 0.4s;
+	animation-timing-function: steps(1, end), steps(1, end);
+}
+#navbar-title-p {
+        animation-name: unhide_text, idle_animation;
+	animation-iteration-count: 1, infinite; 
+	animation-duration: 0.6s, 4s;
+	animation-delay: 0s, 0.6s;
+	animation-timing-function: steps(1, end), steps(1, end);
+}
+#navbar-title-a {
+        animation-name: unhide_text, idle_animation;
+	animation-iteration-count: 1, infinite; 
+	animation-duration: 0.8s, 4s;
+	animation-delay: 0s, 0.8s;
+	animation-timing-function: steps(1, end), steps(1, end);
+}
+#navbar-title-r {
+        animation-name: unhide_text, idle_animation;
+	animation-iteration-count: 1, infinite; 
+	animation-duration: 1s, 4s;
+	animation-delay: 0s, 1s;
+	animation-timing-function: steps(1, end), steps(1, end);
+}
+#navbar-title-k {
+        animation-name: unhide_text, idle_animation;
+	animation-iteration-count: 1, infinite; 
+	animation-duration: 1.2s, 4s;
+	animation-delay: 0s, 1.2s;
+	animation-timing-function: steps(1, end), steps(1, end);
+}
+#navbar-title-dot {
+        animation-name: unhide_text, idle_animation;
+	animation-iteration-count: 1, infinite; 
+	animation-duration: 1.4s, 4s;
+	animation-delay: 0s, 1.4s;
+	animation-timing-function: steps(1, end), steps(1, end);
+}
+#navbar-title-d {
+        animation-name: unhide_text, idle_animation;
+	animation-iteration-count: 1, infinite; 
+	animation-duration: 1.6s, 4s;
+	animation-delay: 0s, 1.6s;
+	animation-timing-function: steps(1, end), steps(1, end);
+}
+#navbar-title-e {
+        animation-name: unhide_text, idle_animation;
+	animation-iteration-count: 1, infinite; 
+	animation-duration: 1.8s, 4s;
+	animation-delay: 0s, 1.8s;
+	animation-timing-function: steps(1, end), steps(1, end);
+}
+#navbar-title-v {
+        animation-name: unhide_text, idle_animation;
+	animation-iteration-count: 1, infinite; 
+	animation-duration: 2s, 4s;
+	animation-delay: 0s, 2s;
+	animation-timing-function: steps(1, end), steps(1, end);
+}
+#navbar-title-underscore {
+        animation-name: unhide_text, idle_animation_underscore;
+	animation-iteration-count: 1, infinite; 
+	animation-duration: 2.2s, 2s;
+	animation-delay: 0s, 2.2s;
+	animation-timing-function: steps(1, end), steps(1, end);
+}
+@keyframes idle_animation {
+	14.28% {
+		color: #cc241d;
+	}
+	28.56% {
+		color: #98971a;
+	}
+	42.84% {
+		color: #d79921;
+	}
+	57.12% {
+		color: #458588;
+	}
+	71.4% {
+		color: #b16286;
+	}
+	85.68% {
+		color: #689d6a;
+	}
+	100% {
+		color: #d65d0e;
+	}
+}
+@keyframes idle_animation_underscore {
+	0% {
+		opacity: 1;
+	}
+	25% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+	}
+	75% {
+		opacity: 0;
+	}
+}
+@keyframes unhide_text {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
 @media (max-width: 1030px) {
   	#navbar-title {
     		display: none;
