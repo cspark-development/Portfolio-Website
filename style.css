@@ -6,6 +6,9 @@
 	--text-color: #3c3836;
 	--text-color-light: #3c3836;
 	--text-color-dark: #ebdbb2;
+	--link-color: #98971a;
+	--link-color-hover: #b8bb36;
+	--link-color-visited: #79740e;
 	--global-animation-speed: 0.2;
 
 	/* Navbar Styling */
@@ -83,6 +86,18 @@ body {
 	padding: 0;
 	overflow: hidden;
 	transition: var(--global-animation-speed);
+}
+
+a {
+	color: var(--link-color);
+}
+
+a:hover {
+	color: var(--link-color-hover);
+}
+
+a:visited {
+	color: var(--link-color-visited);
 }
 
 /* Navbar */
@@ -309,6 +324,7 @@ body {
 	width: 50px;
 	height: 50px;
 	opacity: 0;
+	cursor: pointer;
 }
 
 .navbar-toggle-button-checked {
