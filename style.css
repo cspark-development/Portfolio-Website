@@ -173,77 +173,77 @@ a:visited {
 }
 
 /* Disgusting way to make a nice animation with CSS only */
-#navbar-title-c {
+#navbar-title-0 {
 	animation-name: unhide_text, idle_animation;
 	animation-iteration-count: 1, infinite; 
 	animation-duration: 0.2s, 4s;
 	animation-delay: 0s, 0.2s;
 	animation-timing-function: steps(1, end), steps(1, end);
 }
-#navbar-title-s {
+#navbar-title-1 {
         animation-name: unhide_text, idle_animation;
 	animation-iteration-count: 1, infinite; 
 	animation-duration: 0.4s, 4s;
 	animation-delay: 0s, 0.4s;
 	animation-timing-function: steps(1, end), steps(1, end);
 }
-#navbar-title-p {
+#navbar-title-2 {
         animation-name: unhide_text, idle_animation;
 	animation-iteration-count: 1, infinite; 
 	animation-duration: 0.6s, 4s;
 	animation-delay: 0s, 0.6s;
 	animation-timing-function: steps(1, end), steps(1, end);
 }
-#navbar-title-a {
+#navbar-title-3 {
         animation-name: unhide_text, idle_animation;
 	animation-iteration-count: 1, infinite; 
 	animation-duration: 0.8s, 4s;
 	animation-delay: 0s, 0.8s;
 	animation-timing-function: steps(1, end), steps(1, end);
 }
-#navbar-title-r {
+#navbar-title-4 {
         animation-name: unhide_text, idle_animation;
 	animation-iteration-count: 1, infinite; 
 	animation-duration: 1s, 4s;
 	animation-delay: 0s, 1s;
 	animation-timing-function: steps(1, end), steps(1, end);
 }
-#navbar-title-k {
+#navbar-title-5 {
         animation-name: unhide_text, idle_animation;
 	animation-iteration-count: 1, infinite; 
 	animation-duration: 1.2s, 4s;
 	animation-delay: 0s, 1.2s;
 	animation-timing-function: steps(1, end), steps(1, end);
 }
-#navbar-title-dot {
+#navbar-title-6 {
         animation-name: unhide_text, idle_animation;
 	animation-iteration-count: 1, infinite; 
 	animation-duration: 1.4s, 4s;
 	animation-delay: 0s, 1.4s;
 	animation-timing-function: steps(1, end), steps(1, end);
 }
-#navbar-title-d {
+#navbar-title-7 {
         animation-name: unhide_text, idle_animation;
 	animation-iteration-count: 1, infinite; 
 	animation-duration: 1.6s, 4s;
 	animation-delay: 0s, 1.6s;
 	animation-timing-function: steps(1, end), steps(1, end);
 }
-#navbar-title-e {
+#navbar-title-8 {
         animation-name: unhide_text, idle_animation;
 	animation-iteration-count: 1, infinite; 
 	animation-duration: 1.8s, 4s;
 	animation-delay: 0s, 1.8s;
 	animation-timing-function: steps(1, end), steps(1, end);
 }
-#navbar-title-v {
+#navbar-title-9 {
         animation-name: unhide_text, idle_animation;
 	animation-iteration-count: 1, infinite; 
 	animation-duration: 2s, 4s;
 	animation-delay: 0s, 2s;
 	animation-timing-function: steps(1, end), steps(1, end);
 }
-#navbar-title-underscore {
+#navbar-title-10 {
         animation-name: unhide_text, idle_animation_underscore;
 	animation-iteration-count: 1, infinite; 
 	animation-duration: 2.2s, 2s;
