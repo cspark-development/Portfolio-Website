@@ -35,13 +35,37 @@ function setCSSLight(variables) {
 	};
 }
 
+/* Set Initial Theme */
+function calculateSettingAsThemeString({ localStorageTheme, systemSettingDark }) {
+  if (localStorageTheme !== null) {
+    return localStorageTheme;
+  }
+
+  if (systemSettingDark.matches) {
+    return "dark";
+  }
+
+  return "light";
+}
+const localStorageTheme = localStorage.getItem("theme");
+const systemSettingDark = window.matchMedia("(prefers-color-scheme: dark)");
+const initialThemeSetting = calculateSettingAsThemeString({ localStorageTheme, systemSettingDark });
+if (initialThemeSetting === "dark") {
+	darkmodeToggleParent.classList.add("navbar-toggle-button-checked");
+	darkmodeToggleCheckbox.checked = true;
+	setCSSDark(themedCSSVariables);
+}
+
+/* Dark Mode Toggle Button Logic */
 darkmodeToggleParent.addEventListener("click", function() {
 	const toggleState = darkmodeToggleCheckbox.checked;
 	if (toggleState) {
 		darkmodeToggleParent.classList.add("navbar-toggle-button-checked");
+		localStorage.setItem("theme", "dark");
 		setCSSDark(themedCSSVariables);
 	} else {
 		darkmodeToggleParent.classList.remove("navbar-toggle-button-checked");
+		localStorage.setItem("theme", "light");
 		setCSSLight(themedCSSVariables);
 	};
 });
