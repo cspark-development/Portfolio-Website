@@ -84,7 +84,6 @@ body {
 	text-decoration: none;
 	margin: 0;
 	padding: 0;
-	overflow: hidden;
 	transition: var(--global-animation-speed);
 }
 
@@ -107,20 +106,25 @@ a:visited {
 	max-height: var(--navbar-height);
 	background-color: var(--navbar-background-color);
 	color: var(--navbar-text-color);
+}
+
+#navbar-elements {
+	height: var(--navbar-height);
+	max-width: 100vw;
+	max-height: var(--navbar-height);
+	padding-left: var(--navbar-gap);
+	padding-right: var(--navbar-gap);
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	padding-left: var(--navbar-gap);
-	padding-right: var(--navbar-gap);
-	overflow: scroll;
+	overflow-x: scroll;
 	gap: var(--navbar-gap);
 }
 
 @media (max-width: 575px) {
 	#navbar{
 		justify-content: center;
-		width: 120%;
-		max-width: unset;
+		width: 100%;
 	}
 }
 
@@ -304,11 +308,13 @@ a:visited {
 }
 
 .navbar-toggle-button {
-	display: flex;
+	width: 50px;
+	height: 50px;
 	gap: var(--navbar-gap);
 	background-color: var(--navbar-button-background-color);
 	border-radius: var(--navbar-button-border-radius);
 	transition: var(--navbar-button-animation-speed);
+	cursor: pointer;
 }
 
 .navbar-toggle-button h1 {
@@ -317,14 +323,13 @@ a:visited {
 	text-align: center;
 	justify-self: center;
 	align-self: center;
-	position: absolute;
 }
 
 .navbar-toggle-button input {
 	width: 50px;
 	height: 50px;
-	opacity: 0;
-	cursor: pointer;
+	display: none;
+	position: absolute;
 }
 
 .navbar-toggle-button-checked {
