@@ -1,7 +1,11 @@
 :root {
-	/* Global Page Styling */
+	/* Global Page Styling */ 
 	--background-color: #fbf1c7;
+	--background-color-light: #fbf1c7;
+	--background-color-dark: #3c3836;
 	--text-color: #3c3836;
+	--text-color-light: #3c3836;
+	--text-color-dark: #ebdbb2;
 	--global-animation-speed: 0.2;
 
 	/* Navbar Styling */
@@ -32,6 +36,8 @@
 	--bio-card-border-radius: 5px;
 	--bio-card-gap: 20px;
 	--bio-card-background-color: #3c3836;
+	--bio-card-background-color-light: #3c3836;
+	--bio-card-background-color-dark: #282828;
 	--bio-card-background-color-hover: #7c6f64;
 	--bio-card-title-text-color: #98971a;
 	--bio-card-title-text-color-hover: #b8bb26;
@@ -47,6 +53,8 @@
 	--project-card-border-radius: 5px;
 	--project-card-gap: 20px;
 	--project-card-background-color: #3c3836;
+	--project-card-background-color-light: #3c3836;
+	--project-card-background-color-dark: #282828;
 	--project-card-background-color-hover: #7c6f64;
 	--project-card-title-text-color: #98971a;
 	--project-card-title-text-color-hover: #b8bb26;
@@ -66,6 +74,7 @@ body {
 	background-color: var(--background-color);
 	color: var(--text-color);
 	font-family: "Space Mono", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	transition: var(--global-animation-speed);
 }
 
 * { 
@@ -88,10 +97,24 @@ body {
 	justify-content: space-between;
 	padding-left: var(--navbar-gap);
 	padding-right: var(--navbar-gap);
-	overflow-x: scroll;
+	overflow: scroll;
+	gap: var(--navbar-gap);
 }
 
-/* Navbar Route Buttons */
+@media (max-width: 575px) {
+	#navbar{
+		justify-content: center;
+		width: 120%;
+		max-width: unset;
+	}
+}
+
+/* Navbar Left Side - Navbar Route Buttons */
+#navbar-left {
+	display: flex;
+	gap: var(--navbar-gap);
+}
+
 #navbar-routes {
 	display: flex;
 	gap: var(--navbar-gap);
@@ -119,7 +142,7 @@ body {
 	color: var(--navbar-button-text-color-hover);
 }
 
-/* Navbar Logo/Title */
+/* Navbar Middle - Navbar Logo/Title */
 #navbar-title {
 	width: 20vw;
 	position: absolute;
@@ -259,14 +282,55 @@ body {
   	}
 }
 
-@media (max-width: 500px) {
-	#navbar{
-		justify-content: center;
+/* Navbar Right Side */
+#navbar-right {
+	display: flex;
+	gap: var(--navbar-gap);
+}
+
+.navbar-toggle-button {
+	display: flex;
+	gap: var(--navbar-gap);
+	background-color: var(--navbar-button-background-color);
+	border-radius: var(--navbar-button-border-radius);
+	transition: var(--navbar-button-animation-speed);
+}
+
+.navbar-toggle-button h1 {
+	width: 50px;
+	height: 50px;
+	text-align: center;
+	justify-self: center;
+	align-self: center;
+	position: absolute;
+}
+
+.navbar-toggle-button input {
+	width: 50px;
+	height: 50px;
+	opacity: 0;
+}
+
+.navbar-toggle-button-checked {
+	background-color: var(--navbar-button-background-color);
+	color: var(--navbar-button-text-color);
+}
+
+.navbar-toggle-button > h1::after {
+	content: "☼";
+}
+.navbar-toggle-button-checked > h1::after {
+	content: "☆";
+}
+
+.navbar-toggle-button:hover {
+	background-color: var(--navbar-button-background-color-hover);
+}
+
+@media (scripting: none) {
+	#darkmode-toggle {
+		display: none;
 	}
-	
-	#navbar-profile-picture {
-    		display: none;
-  	}
 }
 
 #navbar-profile-picture {
